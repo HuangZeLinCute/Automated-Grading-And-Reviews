@@ -100,7 +100,7 @@ submissions/
   - 在api_config.py，把DEFAULT_API换成你用的模型
 
 - 题目输入
-  - 题目输入在main函数里的question这里填，不填也没事，会根据代码评分
+  - 题目输入在main.py里的question这里填，不填也没事，会根据代码评分
 
 - 作业提交和输出
   - 提交作业在submissions文件里

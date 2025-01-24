@@ -226,6 +226,13 @@ class Grader:
             if not response:
                 raise ValueError("API返回空响应")
                 
+            # 提取JSON部分
+            json_match = re.search(r'\{.*\}', response, re.DOTALL)
+            if not json_match:
+                raise ValueError("未找到有效的JSON内容")
+                
+            json_content = json_match.group(0)
+            
             # 尝试解析JSON
             try:
                 result = json.loads(json_content)

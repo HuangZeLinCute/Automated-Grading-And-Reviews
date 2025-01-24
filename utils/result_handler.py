@@ -18,7 +18,7 @@ class ResultHandler:
             os.makedirs(os.path.dirname(output_file), exist_ok=True)
             
             # 保存到CSV
-            df.to_csv(output_file, index=False, encoding='utf-8')
+            df.to_csv(output_file, index=False, encoding='utf-8', columns=['student_id', 'total_score', 'grade_level', 'language', 'details', 'feedback'])
             
         except Exception as e:
             print(f"保存结果错误: {str(e)}")
